@@ -8,6 +8,10 @@
   font-weight: 800;
   font-size: 3rem;
 
+  @include respond(tab-land) {
+    font-size: 2.5rem;
+  }
+
   &__title {
     text-transform: uppercase;
     font-family: "Montserrat";
@@ -35,6 +39,10 @@
     background-image: url("../assets/icons/check.svg");
     float: left;
     transform: translateX(-4rem);
+
+    @include respond(tab-land) {
+      transform: translateX(-2rem);
+    }
   }
 
   &__item {

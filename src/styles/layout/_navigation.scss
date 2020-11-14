@@ -7,6 +7,10 @@
   margin: 0 auto;
   height: 8rem;
 
+  @include respond(laptop) {
+    width: $laptop-section-width;
+  }
+
   &__left-container,
   &__right-container {
     display: flex;
