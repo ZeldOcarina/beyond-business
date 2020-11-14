@@ -4,6 +4,10 @@
   justify-content: flex-start;
   align-items: center;
 
+  @include respond(tab-port) {
+    width: 90%;
+  }
+
   &__intro {
     font-weight: 600;
     margin-right: 5rem;
@@ -13,6 +17,11 @@
     @include respond(tab-land) {
       min-width: initial;
       margin-right: 0;
+    }
+    @include respond(tab-port) {
+      min-width: initial;
+      margin-right: 1.5rem;
+      width: 18rem;
     }
   }
 }

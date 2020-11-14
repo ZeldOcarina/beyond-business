@@ -10,6 +10,11 @@
   @include respond(laptop) {
     width: $laptop-section-width;
   }
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+    height: max-content;
+    padding: 4rem 0;
+  }
 
   &__left-container,
   &__right-container {
@@ -17,19 +22,47 @@
     align-items: center;
   }
 
+  &__right-container {
+    @include respond(tab-port) {
+      margin-bottom: 3rem;
+    }
+  }
+
   &__left-container {
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__logo {
     margin-right: 3rem;
     width: 15rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
   }
 
   &__flag {
     margin: 0 0.5rem;
   }
 
-  &__text--right {
-    margin-right: 2.5rem;
+  &__text {
+  }
+
+  &__text {
+    &--right {
+      margin-right: 2.5rem;
+    }
+
+    &--left {
+      @include respond(tab-port) {
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
 }

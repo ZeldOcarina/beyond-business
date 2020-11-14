@@ -9,10 +9,18 @@
     padding: 5rem 10rem 5rem 5rem;
     justify-content: space-between;
   }
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+    padding: 6rem;
+    text-align: center;
+  }
 
   &__text-container {
     @include respond(tab-land) {
       width: 55%;
+    }
+    @include respond(tab-port) {
+      width: 100%;
     }
   }
 
@@ -21,6 +29,10 @@
     font-family: "Montserrat" !important;
     font-weight: 600;
     margin-bottom: 1rem;
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
   }
 
   &__name {
@@ -31,6 +43,9 @@
     @include respond(tab-land) {
       font-size: 5rem;
     }
+    @include respond(tab-port) {
+      margin: 2rem 0;
+    }
   }
 
   &__list {
@@ -39,6 +54,9 @@
 
     @include respond(tab-land) {
       width: 100%;
+    }
+    @include respond(tab-port) {
+      text-align: left;
     }
   }
 
@@ -51,6 +69,11 @@
 
     @include respond(tab-land) {
       transform: scale(1.5);
+    }
+    @include respond(tab-port) {
+      transform: scale(1);
+      margin-bottom: 4rem;
+      width: 50%;
     }
   }
 }

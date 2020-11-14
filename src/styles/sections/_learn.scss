@@ -29,6 +29,12 @@
     display: flex;
     align-items: center;
     transform: translateX(-2rem);
+
+    @include respond(tab-port) {
+      transform: translateX(0);
+      padding: 0;
+      margin: 0;
+    }
   }
 
   &__item::before {
@@ -42,6 +48,9 @@
 
     @include respond(tab-land) {
       transform: translateX(-2rem);
+    }
+    @include respond(tab-port) {
+      width: 2.4rem;
     }
   }
 

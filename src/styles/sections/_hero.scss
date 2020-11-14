@@ -8,6 +8,11 @@
   flex-direction: column;
   justify-content: center;
 
+  @include respond(tab-port) {
+    height: max-content;
+    padding: 11.5rem 0;
+  }
+
   &__title {
     color: $color-tertiary;
 
