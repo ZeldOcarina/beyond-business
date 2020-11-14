@@ -60,6 +60,10 @@ p {
 section {
   width: $section-width;
   margin: 0 auto;
+
+  @include respond(laptop) {
+    width: $laptop-section-width;
+  }
 }
 
 a {
