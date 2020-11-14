@@ -7,6 +7,12 @@
   align-items: center;
   color: $color-secondary;
 
+  @include respond(phone-port) {
+    margin-top: 0;
+    height: 15rem;
+    text-align: center;
+  }
+
   a {
     text-decoration: underline;
   }

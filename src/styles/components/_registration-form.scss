@@ -4,6 +4,10 @@
   width: 100%;
   transform: translateY(-10px);
 
+  @include respond(phone-port) {
+    flex-direction: column;
+  }
+
   &__input-container {
     display: flex;
     flex-direction: column-reverse;
@@ -11,6 +15,11 @@
 
     &:first-child {
       margin-right: 2rem;
+
+      @include respond(phone-port) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -73,6 +82,11 @@
     text-transform: uppercase;
     font-size: 1.8rem;
     transition: all 0.3s;
+
+    @include respond(phone-port) {
+      transform: scale(1);
+      margin-top: 2rem;
+    }
 
     &:hover {
       background-color: darken($color-tertiary, 7%);
