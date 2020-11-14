@@ -1,0 +1,13 @@
+.registration {
+  height: 15rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__intro {
+    font-weight: 600;
+    margin-right: 5rem;
+    min-width: max-content;
+    font-size: 1.4rem;
+  }
+}

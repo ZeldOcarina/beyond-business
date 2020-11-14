@@ -1,0 +1,31 @@
+.navigation {
+  color: $color-secondary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: $section-width;
+  margin: 0 auto;
+  height: 8rem;
+
+  &__left-container,
+  &__right-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left-container {
+  }
+
+  &__logo {
+    margin-right: 3rem;
+    width: 15rem;
+  }
+
+  &__flag {
+    margin: 0 0.5rem;
+  }
+
+  &__text--right {
+    margin-right: 2.5rem;
+  }
+}

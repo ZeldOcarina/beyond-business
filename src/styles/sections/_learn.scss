@@ -1,0 +1,45 @@
+.learn {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 3rem;
+
+  &__title {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    transform: translateX(-2rem);
+  }
+
+  &__item::before {
+    content: "";
+    width: 2.4rem;
+    height: 2rem;
+    display: block;
+    background-image: url("../assets/icons/check.svg");
+    float: left;
+    transform: translateX(-4rem);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}

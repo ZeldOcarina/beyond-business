@@ -1,0 +1,59 @@
+.d-none {
+  display: none !important;
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.container {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  @include respond(laptop) {
+    width: 70%;
+  }
+
+  @include respond(tab-port) {
+    width: 100vw;
+  }
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+.mt-4 {
+  margin-top: 4rem;
+}
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.lead {
+  font-size: $lead-font-size;
+  font-weight: 300;
+}
