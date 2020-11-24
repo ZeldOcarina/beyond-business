@@ -2,6 +2,10 @@
   width: $section-width;
   margin: 0 auto 15rem auto;
 
+  @include respond(tab-port) {
+    width: 80%;
+    margin-bottom: 8rem;
+  }
   @include respond(phone-port) {
     width: 100%;
     margin-bottom: 8rem;
@@ -41,6 +45,9 @@
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease-in-out;
 
+    @include respond(tab-port) {
+      width: 20%;
+    }
     @include respond(phone-port) {
       width: 25%;
     }

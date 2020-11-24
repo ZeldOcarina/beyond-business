@@ -1,5 +1,7 @@
 .hero {
-  background-image: url(../assets/hero/bg-image.png);
+  background-image: url(../assets/hero/bg-image.jpg);
+  background-size: cover;
+  background-position: bottom;
   height: calc(100vh - 8rem);
   width: 100%;
   color: $white;
@@ -24,16 +26,34 @@
     @include respond(tab-land) {
       font-size: 10rem;
     }
-    @include respond(tab-land) {
-      font-size: 10rem;
+    @include respond(tab-port) {
+      font-size: 9rem;
+    }
+    @include respond(phone-land) {
+      font-size: 7rem;
     }
     @include respond(phone-port) {
-      font-size: 8rem;
+      font-size: 7rem;
       margin-bottom: 1rem;
     }
     @include respond(iphone-5) {
       font-size: 6rem;
       margin-bottom: 1rem;
+    }
+
+    &--vertical {
+      transform: rotate(180deg) translateX(2rem) translateY(-0.3rem);
+      writing-mode: vertical-lr;
+      font-size: 55%;
+
+      @include respond(laptop) {
+        font-size: 50%;
+        transform: rotate(180deg) translateX(2rem);
+      }
+      @include respond(phone-port) {
+        font-size: 50%;
+        transform: rotate(180deg) translateX(1rem);
+      }
     }
   }
 
@@ -70,7 +90,7 @@
 
   &__date {
     display: inline-block;
-    background-color: $color-tertiary;
+    background-color: $white;
     color: $color-primary;
     width: max-content;
     margin: 4rem auto 0 auto;
